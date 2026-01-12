@@ -1,9 +1,10 @@
-import { useRoute } from "../core/route.js";
+import { render } from "../core/render.js";
 import { App } from "./App.js";
+import { useRoute } from "../core/route.js";
 
 window.addEventListener("popstate", () => {
-    const [, setRoute] = useRoute();
-    setRoute(window.location.pathname);
+  const [, setRoute] = useRoute();
+  setRoute(window.location.pathname);
 });
 
-useRoute(document.getElementById("app"), App);
+render(document.getElementById("app"), App);
