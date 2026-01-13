@@ -3,7 +3,8 @@ import { Dashboard } from "../pages/Dashboard.js";
 // import { Transacoes } from "../pages/Transacoes.js";
 import { Relatorios } from "../pages/Relatorios.js";
 import { SideBar } from "../components/SideBar/sideBar.js";
-import { LoginPage } from "../pages/LoginPage.js";
+import { LoginPage } from "../pages/Login/index.js";
+import { CadastroPage } from "../pages/Cadastro/index.js";
 
 export function App() {
   const [ route ] = useRoute();
@@ -13,6 +14,10 @@ export function App() {
       case "/":
       case "/index.html":
         return LoginPage();
+      case "/login":
+        return LoginPage();
+      case "/cadastro":
+        return CadastroPage();
       case "/dashboard":
         return Dashboard();
       // case "/transacoes":

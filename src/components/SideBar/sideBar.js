@@ -1,4 +1,4 @@
-import { navigate } from "../../core/navigate.js";
+import { useNavigate } from "../../core/navigate.js";
 
 export function SideBar() {
     
@@ -21,4 +21,4 @@ export function SideBar() {
     `;
 }
 
-window.navigate = navigate;
+window.navigate = useNavigate;

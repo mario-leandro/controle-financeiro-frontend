@@ -1,6 +1,6 @@
 import { useRoute } from "./route.js";
 
-export function navigate(path) {
+export function useNavigate(path) {
     const [, setRoute] = useRoute();
 
     history.pushState({}, "", path);

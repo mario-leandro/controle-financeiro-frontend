@@ -1,4 +1,8 @@
+import { useNavigate } from "../../core/navigate.js";
+
 export function LoginPage() {
+    const navigate = useNavigate();
+
     return `
         <div class="w-96 min-h-96 bg-violet-300 px-6 py-10 rounded-lg shadow-lg flex flex-col justify-between items-center">
             <div class="mb-6">
@@ -15,8 +19,10 @@ export function LoginPage() {
             </form>
 
             <div class="text-sm text-violet-700">
-                <p>Não tem uma conta? <button class="text-violet-700 font-bold hover:underline">Registre-se</button></p>
+                <p>Não tem uma conta? <button onclick="navigate('/cadastro')" class="text-violet-700 font-bold hover:underline">Registre-se</button></p>
             </div>
         </div>
     `;
 }
+
+window.navigate = navigate;
