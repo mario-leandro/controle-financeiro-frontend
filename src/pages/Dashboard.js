@@ -1,6 +1,8 @@
 export function Dashboard() {
     return `
-        <h1>Dashboard</h1>
-        <p>Welcome to the dashboard!</p>
+        <div className="w-full h-screen flex justify-center items-start">
+            <div className="w-full h-full flex flex-row justify-start items-start p-3 md:p-5 gap-5">
+            </div>
+        </div>
     `;
 }
